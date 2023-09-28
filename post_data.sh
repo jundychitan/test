@@ -106,7 +106,7 @@ do
 					#  php -f $project_dir/meter/send_file.php $amr_url $lp_dir 'lp/'$location 1
 					#  php -f $project_dir/meter/send_file.php $amr_url $hist_dir 'history/'$location 1
 					# #$script_dir/upload_lp.sh $amr_url '/var/www/html/lp/upload/lp/'$location $lp_dir 
-					return=$(/projects/amr/meter/send_file.sh $amr_url $lp_dir $remote_lp_dir/$location)					
+					return=$(/projects/amr/scripts/send_file.sh $amr_url $lp_dir $remote_lp_dir/$location)					
 					if [ $return == '1' ]; then
 						echo 'Success...'
 						if [ -f /tmp/lp_read ]; then
